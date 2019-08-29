@@ -12,6 +12,11 @@ repositories {
     mavenCentral()
 }
 
+jar{
+    baseName = 'tenders'
+    version = '1'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.session:spring-session-core'

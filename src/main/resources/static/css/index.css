@@ -1,0 +1,35 @@
+table{
+    margin-top: 5%;
+}
+#maincontent{
+    margin-top: 6%;
+}
+#addRecord{
+
+    padding-top: 0.5em;
+    padding-bottom: 0.25em;
+    margin-bottom: 3%;
+    -webkit-box-shadow: 0px 0px 31px -10px rgba(34,47,56,0.47);
+    -moz-box-shadow: 0px 0px 31px -10px rgba(34,47,56,0.47);
+    box-shadow: 0px 0px 31px -10px rgba(34,47,56,0.47);
+
+}
+
+#navName{
+    position: absolute;
+    justify-content: flex-start;
+    left: 2em;
+}
+
+
+
+#buttonAdd{
+    color: green;
+    font-weight: bold;
+
+}
+#card-info{
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}

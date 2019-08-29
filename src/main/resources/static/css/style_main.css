@@ -1,0 +1,32 @@
+#topinfo{
+    text-align: center;
+    background-image: url(https://www.port.ac.uk/-/media/images/heros---1200x400-large---640x400-small/courses/pgt-courses/msc-international-finance-and-banking-1200x400.ashx);
+    height: 400px;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    margin-top: -1px;
+
+}
+#toptext{
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #b7fcf0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

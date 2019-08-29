@@ -37,6 +37,31 @@ public class User {
     public User() {
     }
 
+    public User(String id, String firstname, String lastname, String middlename, String code, String phone, String email, String password, String regplace) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middlename = middlename;
+        this.code = code;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.regplace = regplace;
+    }
+
+    public User(String id, String firstname, String lastname, String middlename, String code, String phone, String email, String password, String regplace, List<Tender> tenderlist) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.middlename = middlename;
+        this.code = code;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.regplace = regplace;
+        this.tenderlist = tenderlist;
+    }
+
     private String showTenders(){
         StringBuilder tenders = new StringBuilder();
         for(Tender tender : tenderlist){

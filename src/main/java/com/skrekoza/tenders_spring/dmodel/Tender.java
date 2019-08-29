@@ -17,29 +17,107 @@ public class Tender {
     private String tender_type;
     @Field("price")
     private int price;
+    @Field("vault")
+    private String vault;
     @Field("min_step_size")
     private int min_step_size;
     @Field("min_step_percentage")
     private int min_step_percentage;
     @Field("subjects")
     private String subjects;
-    @Field("subject_category")
-    private Category subject_category;
+    @Field("detailed_subject")
+    private String detailed_subject;
+/*    @Field("subject_category")
+    private Category subject_category;*/
     @Field("creating_date")
     private Date creating_date;
+    @Field("consider_date")
     private Date consider_date;
+    @Field("starting_date")
     private Date starting_date;
+    @Field("finishing_date")
     private Date finishing_date;
-    private String documents;
+    /*private String documents;*/
     @Field("status")
     private String status;
 
-    public Tender() {
+    public Tender(String id, String tender_id, String tender_type, int price, String vault, int min_step_size, int min_step_percentage, String subjects, String detailed_subject, String status) {
+        this.id = id;
+        this.tender_id = tender_id;
+        this.tender_type = tender_type;
+        this.price = price;
+        this.vault = vault;
+        this.min_step_size = min_step_size;
+        this.min_step_percentage = min_step_percentage;
+        this.subjects = subjects;
+        this.detailed_subject = detailed_subject;
+        this.status = status;
+    }
+
+    public Tender(String tender_type, int price, String vault, int min_step_size, int min_step_percentage, String subjects) {
+        this.tender_type = tender_type;
+        this.price = price;
+        this.vault = vault;
+        this.min_step_size = min_step_size;
+        this.min_step_percentage = min_step_percentage;
+        this.subjects = subjects;
+    }
+
+    public Tender(String id, String tender_id, String tender_type, Integer price, String vault, Integer min_step_size, Integer min_step_percentage, String subjects, String detailed_subject, Date creating_date, Date consider_date, Date starting_date, Date finishing_date, String status) {
+        this.id = id;
+        this.tender_id = tender_id;
+        this.tender_type = tender_type;
+        this.price = price;
+        this.vault = vault;
+        this.min_step_size = min_step_size;
+        this.min_step_percentage = min_step_percentage;
+        this.subjects = subjects;
+        this.creating_date = creating_date;
+        this.consider_date = consider_date;
+        this.starting_date = starting_date;
+        this.finishing_date = finishing_date;
+        this.status = status;
+    }
+
+    public Tender(String id, String tender_id, String tender_type, int price, String vault, int min_step_size, int min_step_percentage, String subjects, Date creating_date, Date consider_date, Date starting_date, Date finishing_date, String status) {
+        this.id = id;
+        this.tender_id = tender_id;
+        this.tender_type = tender_type;
+        this.price = price;
+        this.vault = vault;
+        this.min_step_size = min_step_size;
+        this.min_step_percentage = min_step_percentage;
+        this.subjects = subjects;
+        this.creating_date = creating_date;
+        this.consider_date = consider_date;
+        this.starting_date = starting_date;
+        this.finishing_date = finishing_date;
+        this.status = status;
     }
 
     @Override
     public String toString() {
         return "id = " + id + "; tender_id = " + tender_id + "; price = " + price + "; status = " + status;
+    }
+
+    public String getPriceString(){
+        return price + " " + vault;
+    }
+
+    public String getDetailed_subject() {
+        return detailed_subject;
+    }
+
+    public void setDetailed_subject(String detailed_subject) {
+        this.detailed_subject = detailed_subject;
+    }
+
+    public String getVault() {
+        return vault;
+    }
+
+    public void setVault(String vault) {
+        this.vault = vault;
     }
 
     public String getId() {
@@ -98,13 +176,13 @@ public class Tender {
         this.subjects = subjects;
     }
 
-    public Category getSubject_category() {
+   /* public Category getSubject_category() {
         return subject_category;
     }
 
     public void setSubject_category(Category subject_category) {
         this.subject_category = subject_category;
-    }
+    }*/
 
     public Date getCreating_date() {
         return creating_date;
@@ -138,13 +216,13 @@ public class Tender {
         this.finishing_date = finishing_date;
     }
 
-    public String getDocuments() {
+    /*public String getDocuments() {
         return documents;
     }
 
     public void setDocuments(String documents) {
         this.documents = documents;
-    }
+    }*/
 
     public String getStatus() {
         return status;
